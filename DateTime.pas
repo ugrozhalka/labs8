@@ -1,10 +1,19 @@
 ﻿begin
   var year := ReadInteger('Введите год:');
+  var flag := True;
   if ((year mod 4 = 0) and (year mod 100 <> 0)) or ((year mod 100 = 0) and (year mod 400 = 0)) then
     Println('Високосный год')
   else
+  begin
     Println('Невисокосный год');
+    flag := False
+  end;
+  if flag = True then
+    Println($'В {year} году 366 дней')
+  else
+    Println($'В {year} году 365 дней');
   Println();
+  
   Println('Введите первую дату:');
   var day1 := ReadInteger(' день:');
   var month1 := ReadInteger(' месяц:');
