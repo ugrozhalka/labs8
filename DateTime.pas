@@ -4,4 +4,18 @@
     Println('Високосный год')
   else
     Println('Невисокосный год');
+  Println();
+  Println('Введите первую дату:');
+  var day1 := ReadInteger(' день:');
+  var month1 := ReadInteger(' месяц:');
+  Println();
+  Println('Введите вторую дату:');
+  var day2 := ReadInteger(' день:');
+  var month2 := ReadInteger(' месяц:');
+  Assert((0 < day1) and (day1 <= 31) and (0 < day2) and (day2 <= 31)); 
+  Assert((0 < month1) and (month1 <= 12) and (0 < month2) and (month2 <= 12));
+  if (month1 > month2) or ((month1 = month2) and (day1 > day2)) then
+    Print('Первая дата ближе к НГ')
+  else
+    Print('Вторая дата ближе к НГ')
 end.
