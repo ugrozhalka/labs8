@@ -41,5 +41,10 @@
     else
       summa += 365
   end;
-  Println($'Сумма дней между {year1} и {year2} годами = {summa}')
+  Println($'Сумма дней между {year1} и {year2} годами = {summa}');
+  Println();
+  
+  Println('Вычисление количества секунд в заданном количестве часов');
+  var hours := ReadInteger('Введите количество часов:');
+  Println($'В {hours} часах {hours*60*60} секунд')
 end.
